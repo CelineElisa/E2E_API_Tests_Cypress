@@ -2,3 +2,4 @@
 /dist
 /screenshots
 cypress.env.json
+cypress/screenshots
