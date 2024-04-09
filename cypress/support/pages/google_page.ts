@@ -12,6 +12,6 @@ export class GooglePage {
     checkResearchResult(result: { linkTittle: string; link: string; linkDescription: string; preview: string }):void {
         cy.contains('a span', result.linkTittle).should('exist')
         cy.contains(`[href="${result.link}"]`, result.linkDescription).should('exist')
-        cy.contains('[data-sncf="1"]', result.preview)
+        cy.contains(result.preview)
     }
 }

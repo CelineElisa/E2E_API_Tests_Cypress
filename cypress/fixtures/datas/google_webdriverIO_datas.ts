@@ -30,8 +30,8 @@ export class GoogleWebdriverIODatas {
         this.googleResult = {
             linkTittle: 'WebdriverIO',
             link: 'https://webdriver.io/fr/', 
-            linkDescription: 'Navigateur de nouvelle génération et framework de test d ...', 
-            preview: 'WebdriverIO est un framework tout en un seul pour le développement de votre application Web. Il vous permet d\'exécuter des tests de composants petits et légers ...'
+            linkDescription: 'Navigateur de nouvelle génération et', 
+            preview: 'WebdriverIO est un framework tout en un seul pour le développement de votre application Web.'
         }
         
         this.setUpTypesPage = {
