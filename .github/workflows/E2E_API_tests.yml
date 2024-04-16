@@ -1,8 +1,11 @@
 name: Cypress E2E and API Daily Tests
 
 on:
-  schedule:
-    - cron: '10 12 * * *'
+  # schedule:
+  #   - cron: '10 12 * * *'
+  push:
+    branches:
+      - main  
 
 jobs:
   cypress-run:
@@ -10,10 +13,17 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Install dependencies
       run: npm install
 
     - name: Run Cypress tests
       run: npm run cypress:run
+
+    - name: Save screenshots as artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: screenshots
+        path: cypress/screenshots

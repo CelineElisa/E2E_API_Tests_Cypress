@@ -2,7 +2,7 @@ export class GooglePage {
 
     visit():void {
         cy.visit('https://www.google.com/')
-        cy.contains('button', 'Tout accepter').click()
+        cy.get('[id="L2AGLb"]').click()
     }
 
     research(text:string):void {
