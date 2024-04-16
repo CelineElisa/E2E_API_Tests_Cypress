@@ -1,7 +1,17 @@
 export class GooglePage {
 
     visit():void {
-        cy.visit('https://www.google.com/')
+        cy.visit('https://www.google.com/', {
+            onBeforeLoad(win) {
+                Object.defineProperty(win.navigator, 'language', { value: 'en-gb' });
+                Object.defineProperty(win.navigator, 'languages', { value: ['en-gb'] });
+                Object.defineProperty(win.navigator, 'accept_languages', { value: ['en-gb'] });
+                },
+                headers: {
+                'Accept-Language': 'en-gb',
+                },
+              
+        })
         cy.get('[id="L2AGLb"]').click()
     }
 
