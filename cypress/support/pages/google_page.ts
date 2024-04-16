@@ -12,7 +12,6 @@ export class GooglePage {
                 },
               
         })
-        cy.get('[id="L2AGLb"]').click()
     }
 
     research(text:string):void {
