@@ -3,3 +3,4 @@
 /screenshots
 cypress.env.json
 cypress/screenshots
+/allure-results
